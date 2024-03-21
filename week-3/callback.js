@@ -6,9 +6,9 @@
 
 const myNumbers = [4, 1, -20, -7, 5, 9, -6];
 
-const positiveNumbers = removeNegative(myNumbers, (x) => x >= 0);
 
-document.getElementById("callback").innerHTML = positiveNumbers;
+
+document.getElementById("initial").innerHTML += myNumbers;
 
 function removeNegative(numbers,callback) {
     const myArray = [];
@@ -19,3 +19,7 @@ function removeNegative(numbers,callback) {
     }
     return myArray;
 }
+
+const positiveNumbers = removeNegative(myNumbers, (x) => x >= 0);
+
+document.getElementById("callback").innerHTML += positiveNumbers;
